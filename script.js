@@ -14,7 +14,7 @@ const colors = {
   fire: '#FDDFDF',
   grass: '#DEFDE0',
   electric: '#FCF7DE',
-  water: '#DEF3FD',
+  water: '#93B5C6',
   ground: '#f4e7da',
   rock: '#d5d5d4',
   fairy: '#fceaff',
@@ -24,7 +24,10 @@ const colors = {
   psychic: '#eaeda1',
   flying: '#f5f5f5',
   fighting: '#e6e0d4',
-  normal: '#f5f5f5'
+  normal: '#f5f5f5',
+  ice: '#DEF3FD',
+  ghost: '#BFA2DB',
+  steel: '#9D9D9D'
 };
 
 const main_types = Object.keys(colors);
@@ -136,13 +139,17 @@ sortBtn.addEventListener('click', resortByName)
 function resortByName() {
   const pokemonList = [...document.querySelectorAll('.pokemon')]
   console.log(pokemonList)
+
+
   let alphabeticallyOrderedDivs = pokemonList.sort(function (a, b) {
-    return a.dataset.name - b.dataset.name;
+    return a.dataset.name === b.dataset.name ? 0 : (a.dataset.name > b.dataset.name ? 1 : -1);
   });
   console.log(alphabeticallyOrderedDivs)
   let container = document.querySelector('.poke_container');
-  container.append(alphabeticallyOrderedDivs.innerHTML);
-  document.querySelector('.container').append(container)
+
+  container.childNodes.forEach(pokemon => pokemon.remove())
+  alphabeticallyOrderedDivs.forEach(pokemon => container.appendChild(pokemon))
+
 }
 
 
