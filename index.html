@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Module 8 Project</title>
+  </head>
+  <body>
+    <header><h1>PokeDex Project</h1></header>
+    <div class="filter">
+      <ul>
+        <li data-filter="all">All</li>
+        <li data-filter="fire">Fire</li>
+        <li data-filter="grass">Grass</li>
+        <li data-filter="electric">Electric</li>
+        <li data-filter="water">Water</li>
+        <li data-filter="ground">Ground</li>
+        <li data-filter="rock">Rock</li>
+        <li data-filter="fairy">Fairy</li>
+        <li data-filter="poison">Poison</li>
+        <li data-filter="bug">Bug</li>
+        <li data-filter="dragon">Dragon</li>
+        <li data-filter="psychic">Psychic</li>
+        <li data-filter="flying">Flying</li>
+        <li data-filter="fighting">Fighting</li>
+        <li data-filter="normal">Normal</li>
+      </ul>
+      <button id="random-btn" class="random-btn">
+        Randomly Choose Pokemon
+      </button>
+      <button id="sort-btn" class="sort-btn">Sort Alphabetically</button>
+    </div>
+
+    <div class="container">
+      <div id="poke_container" class="poke_container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

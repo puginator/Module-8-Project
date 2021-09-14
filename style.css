@@ -1,0 +1,57 @@
+header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filter ul {
+    display: flex;
+    list-style: none;
+}
+
+.filter li {
+    padding: 10px;
+    background-color: #d5d5d4;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.active {
+    color: #495fef;
+}
+
+.poke_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon {
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 125px;
+}
+
+.pokemon .img-container {
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
+.pokemon .img-container img {
+    max-width: 80%;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: flex-end;
+}
